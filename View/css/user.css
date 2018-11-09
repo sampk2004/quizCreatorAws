@@ -1,0 +1,10 @@
+#submit {
+  float:right;
+}
+
+#wrapper {
+  padding-top: 30px;
+}
+#score {
+  display: none;
+}

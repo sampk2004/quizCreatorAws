@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="View/css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="Model/apigClient.js"></script>
+    <script src="Model/model.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="Controller/controller.js"></script>
+    <script src="View/view.js"></script>
+</head>
+<div id="adminPanel" class="panel panel-default">
+    <h1>Admin Interface</h1>
+    <div class="questionheading" id="questionTemplate">
+        <div class="questionBox">
+            <br>
+            <button class="tag btn btn-success" onclick="toggle(this)" data-state="easy">Easy</button>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 name="qheading">Question 1 Text *</h5>
+                    </div>
+                    <div class="questionText" name="questiontext" contenteditable="true"></div>
+                    <div class="panel-body">
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 name="aheading">Answers 1 *</h5>
+                    </div>
+                    <div class="panel-body" id="choice">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <input type="radio" name="choice1" class="answer" required>
+                            </div>
+                            <div class="col-lg-10">
+                                <div placeholder="question1" class="choice" name="choicetext1" contenteditable="true"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <input type="radio" name="choice1" class="answer" required>
+                            </div>
+                            <div class="col-lg-10">
+                                <div placeholder="question1" class="choice" name="choicetext1" contenteditable="true"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <input type="radio" name="choice1" class="answer" required>
+                            </div>
+                            <div class="col-lg-10">
+                                <div placeholder="question1" class="choice" name="choicetext1" contenteditable="true"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <input type="radio" name="choice1" class="answer" required>
+                            </div>
+                            <div class="col-lg-10">
+                                <div placeholder="question1" class="choice" name="choicetext1" contenteditable="true"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-danger delete" id="delete" onclick="erase(0)">Delete</button>
+        </div>
+    </div>
+    <br>
+
+    <div id="buttoncontainer">
+        <div id="alert" class="alert alert-success" role="alert">
+            Quiz successfully saved!!
+        </div>
+        <button class="btn btn-primary" id="submit1" onclick="submitQuiz()">Save</button>
+        <button class="btn btn-info" onclick="init();return false">Add</button>
+    </div>
+
+    <div>
+    </div>
+</html>
+<script>
+
+</script>
